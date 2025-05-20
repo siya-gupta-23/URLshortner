@@ -29,6 +29,6 @@ A simple and smart tool to convert long URLs into short, shareable links using a
 1. Download `cpp-httplib` and `nlohmann/json` single-header files into respective folders.
 2. Compile using:
    ```bash
-  g++ -I./cpp-httplib -I./json -o shortenurl main.cpp -lws2_32
-  ./shortenurl
+   g++ -I./cpp-httplib -I./json -o shortenurl main.cpp -lws2_32
+   ./shortenurl
 
