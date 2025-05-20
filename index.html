@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header of logo and main title -->
+        <div class="header">
+
+            <h1>URL Shortener</h1>
+            <h2>Your Go-To URL Shortening Service</h2>
+        </div>
+
+        <!-- URL input and shorten button box -->
+        <div class="shortener-box">
+            <input type="text" id="long-url" placeholder="Enter your long URL here" required>
+            <button id="shorten-btn">Shorten</button>
+        </div>
+
+        <!-- Result section to show the shortened URL -->
+        <div class="result">
+            <p id="short-url" class="hidden">Your shortened URL will appear here!</p>
+            <p id="error-message" class="hidden"></p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <h5>Powered by YourBrand</h5>
+        </div>
+    </div>
+
+    <!-- Loading Spinner (hidden by default) -->
+    <div id="loading-spinner"></div>
+
+    <!-- External Libraries and Script -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>

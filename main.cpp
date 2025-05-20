@@ -11,7 +11,7 @@ using namespace std;
 using namespace httplib;
 using json = nlohmann::json;
 
-// In-memory map for short -> long URL
+// memory map for short -> long URL
 unordered_map<string, string> url_db;
 
 // Random short code generator
@@ -28,7 +28,7 @@ string generate_short_code(int length = 6) {
     return code;
 }
 
-// Add CORS headers (for frontend later)
+// Add CORS headers (frontend)
 void add_cors_headers(Response &res) {
     res.set_header("Access-Control-Allow-Origin", "*");
     res.set_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
@@ -73,7 +73,7 @@ int main() {
         }
     });
 
-    // GET /<shortcode> - redirect
+    // GET --> <shortcode>
     svr.Get(R"(/([a-zA-Z0-9]+))", [](const Request &req, Response &res) {
         add_cors_headers(res);
         string code = req.matches[1];
